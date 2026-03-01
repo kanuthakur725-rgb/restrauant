@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elegant Bites | Fine Dining Restaurant</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#111;
+    color:#fff;
+    scroll-behavior:smooth;
+}
+
+header{
+    position:fixed;
+    width:100%;
+    padding:20px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.8);
+    z-index:1000;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color:#f4c10f;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:30px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#f4c10f;
+}
+
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://images.pexels.com/photos/2506993/pexels-photo-2506993.jpeg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    padding:12px 30px;
+    background:#f4c10f;
+    color:#000;
+    border:none;
+    cursor:pointer;
+    font-weight:600;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#fff;
+}
+
+section{
+    padding:100px 80px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+    font-size:36px;
+    color:#f4c10f;
+}
+
+.about{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    max-width:500px;
+    border-radius:10px;
+}
+
+.about-text{
+    flex:1;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.menu-item{
+    background:#1c1c1c;
+    padding:20px;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.menu-item:hover{
+    transform:translateY(-5px);
+}
+
+.menu-item h3{
+    margin-bottom:10px;
+    color:#f4c10f;
+}
+
+.menu-item p{
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.price{
+    font-weight:600;
+}
+
+.reservation{
+    background:#1a1a1a;
+    border-radius:10px;
+    padding:40px;
+    max-width:600px;
+    margin:auto;
+}
+
+.reservation input, 
+.reservation textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:5px;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#000;
+    font-size:14px;
+    color:#aaa;
+}
+
+@media(max-width:768px){
+    header{
+        padding:20px;
+    }
+    section{
+        padding:80px 20px;
+    }
+    .hero h1{
+        font-size:40px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">SIDHARTH RESTAURANT</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#reservation">Reservation</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div>
+        <h1>Experience Fine Dining</h1>
+        <p>Delicious food crafted with passion & elegance</p>
+        <button class="btn" onclick="scrollToSection('reservation')">Book a Table</button>
+    </div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About Us</h2>
+    <div class="about">
+        <img src="https://images.pexels.com/photos/4669250/pexels-photo-4669250.jpeg" alt="Restaurant">
+        <div class="about-text">
+            <p>
+                Elegant Bites offers a luxurious dining experience with world-class chefs,
+                premium ingredients, and an unforgettable atmosphere.
+            </p>
+            <br>
+            <p>
+                Our mission is to serve culinary excellence that delights every sense.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="menu">
+    <h2 class="section-title">Our Menu</h2>
+    <div class="menu-grid">
+        <div class="menu-item">
+            <h3>Grilled Salmon</h3>
+            <p>Fresh Atlantic salmon with lemon butter sauce.</p>
+            <div class="price">$24</div>
+        </div>
+        <div class="menu-item">
+            <h3>Steak Deluxe</h3>
+            <p>Premium beef steak cooked to perfection.</p>
+            <div class="price">$35</div>
+        </div>
+        <div class="menu-item">
+            <h3>Classic Pasta</h3>
+            <p>Italian pasta with rich tomato basil sauce.</p>
+            <div class="price">$18</div>
+        </div>
+        <div class="menu-item">
+            <h3>Chocolate Lava Cake</h3>
+            <p>Warm chocolate cake with molten center.</p>
+            <div class="price">$12</div>
+        </div>
+    </div>
+</section>
+
+<section id="reservation">
+    <h2 class="section-title">Reserve a Table</h2>
+    <div class="reservation">
+        <form onsubmit="handleReservation(event)">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="date" required>
+            <input type="time" required>
+            <textarea rows="4" placeholder="Special Requests"></textarea>
+            <button type="submit" class="btn">Submit Reservation</button>
+        </form>
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <p style="text-align:center;">123 Gourmet Street, Food City</p>
+    <p style="text-align:center;">Phone: +1 234 567 890</p>
+    <p style="text-align:center;">Email: info@elegantbites.com</p>
+</section>
+
+<footer>
+    © 2026 Elegant Bites. All Rights Reserved.
+</footer>
+
+<script>
+function scrollToSection(id){
+    document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+
+function handleReservation(e){
+    e.preventDefault();
+    alert("Thank you! Your reservation request has been submitted.");
+}
+</script>
+
+</body>
+</html>
